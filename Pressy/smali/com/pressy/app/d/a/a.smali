@@ -134,3 +134,11 @@
 
     return-object v0
 .end method
+
+.method public v(Ljava/lang/Boolean;)Lcom/pressy/app/d/a/a;
+    .locals 0
+
+    iput-object p1, p0, Lcom/pressy/app/d/a/a;->valid:Ljava/lang/Boolean;
+
+    return-object p0
+.end method

@@ -131,12 +131,12 @@
 
     if-ne p1, v0, :cond_2
 
-    const-wide/16 v0, 0x12c
+    const-wide/16 v0, 0x0
 
     goto :goto_0
 
     :cond_2
-    const-wide/16 v0, 0x4b0
+    const-wide/16 v0, 0x0
 
     goto :goto_0
 
