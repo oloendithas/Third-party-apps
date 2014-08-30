@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/layoutListItemHeader" android:background="@color/rule_toolbar_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pressy="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutRuleToolbar" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/btnDeleteRule" android:background="@android:color/transparent" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_content_discard" />
+        <ImageButton android:id="@id/btnEnableDisableRule" android:background="@android:color/transparent" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_av_pause" />
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="right" android:id="@id/layoutRuleBriefDetails" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/imgActionIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_normal" android:src="@drawable/ic_launcher" android:layout_centerVertical="true" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/txtRuleName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="RULE NAME" android:singleLine="true" android:layout_toLeftOf="@id/viewTriggerDisplay" android:layout_toRightOf="@id/imgActionIcon" android:layout_centerVertical="true" />
+        <com.pressy.app.ui.TriggerDisplayView android:id="@id/viewTriggerDisplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_normal" android:layout_marginRight="@dimen/padding_large" android:layout_alignParentRight="true" android:layout_centerVertical="true" pressy:displaySize="small" />
+    </RelativeLayout>
+</FrameLayout>

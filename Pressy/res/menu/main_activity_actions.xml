@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pressy="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/selector_action_bar_add_action" android:id="@id/action_add_rule" android:title="@string/action_title_add_rule" pressy:showAsAction="always" />
+    <item android:icon="@drawable/selector_action_bar_up" android:id="@id/action_back_to_rules_list" android:visible="false" android:title="@string/action_title_back_to_rules_list" pressy:showAsAction="always" />
+    <item android:icon="@drawable/selector_action_bar_x" android:id="@id/action_cancel" android:visible="false" android:title="@string/action_title_cancel" pressy:showAsAction="always" />
+    <item android:icon="@drawable/selector_action_bar_v" android:id="@id/action_ok" android:visible="false" android:title="@string/action_title_ok" pressy:showAsAction="always" />
+    <item android:icon="@android:drawable/ic_menu_manage" android:id="@id/action_settings" android:title="@string/action_title_settings" pressy:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_gallery" android:id="@id/action_pressy_media" android:title="@string/action_title_pressy_media" pressy:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_share" android:id="@id/action_recommend" android:title="@string/action_title_recommend" pressy:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/action_get_more_pressy" android:title="@string/action_title_get_more_pressy" pressy:showAsAction="never" />
+    <item android:icon="@android:drawable/btn_star" android:id="@id/action_rate" android:title="@string/action_title_rate" pressy:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/action_help" android:title="@string/action_title_help" pressy:showAsAction="never" />
+</menu>

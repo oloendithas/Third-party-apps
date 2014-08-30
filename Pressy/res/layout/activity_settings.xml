@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pressy="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/chkEnablePressy" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PressyCheckBox" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/enable_pressy_setting_header" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/enable_pressy_setting_desc" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/chkShowToastForLaunchedActions" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PressyCheckBox" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_toast_for_launched_actions_header" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_toast_for_launched_actions_desc" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/chkShowToastForUnhandledPatterns" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PressyCheckBox" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_toast_for_unhandled_patterns_header" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_toast_for_unhandled_patterns_desc" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/chkVibrationFeedback" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PressyCheckBox" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vibration_feedback_header" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vibration_feedback_desc" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@id/chkEnableLongPresses" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PressyCheckBox" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/enable_long_presses_header" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/enable_long_presses_desc" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_horizontal" android:id="@id/txtPressesSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_large" android:text="@string/presses_speed_setting_desc" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:text="@string/presses_speed_setting_hint" />
+        <RadioGroup android:orientation="horizontal" android:id="@id/radioGroupPressesSpeed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_large">
+            <RadioButton android:id="@id/radioPressesSpeedSlow" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/presses_speed_setting_slow" android:layout_weight="1.0" style="@style/PressyRadioButton" />
+            <RadioButton android:id="@id/radioPressesSpeedNormal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:checked="true" android:text="@string/presses_speed_setting_normal" android:layout_weight="1.0" style="@style/PressyRadioButton" />
+            <RadioButton android:id="@id/radioPressesSpeedFast" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/presses_speed_setting_fast" android:layout_weight="1.0" style="@style/PressyRadioButton" />
+        </RadioGroup>
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:id="@id/btnAboutUs" android:background="@drawable/button_background_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/button_text_about_us" />
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:id="@id/btnStartTutorial" android:background="@drawable/button_background_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/button_text_start_tutorial" />
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:id="@id/btnRestoreSettings" android:background="@drawable/button_background_settings" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/button_text_restore_settings" />
+        <View android:background="@color/separator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Button android:id="@id/btnSendFeedback" android:background="@drawable/button_background_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/button_text_send_feedback" />
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</ScrollView>

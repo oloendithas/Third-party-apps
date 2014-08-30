@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/txtSetPressyDefaultActionDesc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="ACTION DESC" android:layout_toLeftOf="@id/btnSetPressyDefaultAction" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Button android:id="@id/btnSetPressyDefaultAction" android:background="@drawable/button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_text_set_pressy_default_go" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/txtConflictingAppsHeader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:text="@string/set_pressy_default_conflicting_apps_header" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/layoutConflictingAppsIcons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_marginBottom="12.0dip" />
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:orientation="vertical" android:id="@id/radioGroupAppTypeSelection" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/padding_radio_group_checkbox_left"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/radioCustomApp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/radio_custom_app" style="@style/PressyRadioButton" />
+    <RelativeLayout android:id="@id/layoutCustomApp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btnSelectApp" android:background="@drawable/button_background" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_app_button_text" android:layout_alignParentRight="true" />
+        <TextView android:id="@id/txtSelectedApp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_normal" android:text="@string/validation_error_no_app_selected" android:layout_toLeftOf="@id/btnSelectApp" android:layout_toRightOf="@id/imgSelectedAppIcon" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imgSelectedAppIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/sym_def_app_icon" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/padding_large" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large" />
+    <RadioButton android:id="@id/radioConnectedApp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/radio_connected_apps" style="@style/PressyRadioButton" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layoutConnectedApps" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <HorizontalScrollView android:id="@id/scrollConnectedApps" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/layoutConnectedAppsButtons" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+        <FrameLayout android:id="@id/layoutConnectedAppPropertiesPlaceholder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/padding_large" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large" />
+    <RadioButton android:id="@id/radioRunShortcut" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/radio_run_shortcut" style="@style/PressyRadioButton" />
+    <RelativeLayout android:id="@id/layoutRunShortcut" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_large">
+        <Button android:id="@id/btnCreateShortcut" android:background="@drawable/button_background" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/create_shortcut_button_text" android:layout_alignParentRight="true" />
+        <TextView android:id="@id/txtShortcutName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_normal" android:text="@string/validation_error_shortcut_selected" android:layout_toLeftOf="@id/btnCreateShortcut" android:layout_toRightOf="@id/imgShortcutIcon" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/imgShortcutIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/sym_def_app_icon" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+</RadioGroup>

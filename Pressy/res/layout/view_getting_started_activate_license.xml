@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="@dimen/padding_normal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center" android:id="@id/pgbActivationByEmail" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Large" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layoutGettingStartedActivationDetails" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Spinner android:id="@id/spinEmailSelection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_normal" />
+        <EditText android:layout_gravity="bottom" android:id="@id/txtLicenseEmail" android:background="@drawable/edit_text_holo_light" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/activation_email_hint" android:singleLine="true" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_normal">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_normal" android:layout_toLeftOf="@id/layoutActivateLicense" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                <EditText android:layout_gravity="bottom" android:id="@id/txtLicenseCode" android:background="@drawable/edit_text_holo_light" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/activation_code_hint" android:singleLine="true" android:maxLength="14" android:imeOptions="actionDone" />
+                <ImageButton android:layout_gravity="right|center" android:id="@id/btnScanLicenseQR" android:background="@android:color/transparent" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_scan_qr_2" android:text="@string/scan_qr_button_text" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/layoutActivateLicense" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <Button android:id="@id/btnActivateLicense" android:background="@drawable/button_background" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_text_activate_license" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/pgbActivatingLicense" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@android:style/Widget.ProgressBar.Small" />
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

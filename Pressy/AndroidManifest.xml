@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" android:sharedUserId="com.pressy" package="com.pressy.app">
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
+    <permission android:name="com.pressy.app.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.pressy.app.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:label="@string/app_name" android:name="com.pressy.app.MainActivity" android:screenOrientation="portrait" android:theme="@style/PressyActivityTheme" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:label="@string/app_name" android:name="com.pressy.app.GettingStartedActivity" android:screenOrientation="portrait" android:theme="@style/PressyActivityTheme"/>
+        <activity android:launchMode="singleTop" android:name="com.pressy.app.tutorial.TutorialOverlayActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:label="@string/title_activity_settings" android:name="com.pressy.app.SettingsActivity" android:screenOrientation="portrait" android:theme="@style/PressyActivityTheme"/>
+        <activity android:exported="false" android:label="@string/title_activity_about" android:name="com.pressy.app.AboutActivity" android:screenOrientation="portrait" android:theme="@style/PressyActivityTheme"/>
+        <activity android:exported="false" android:label="@string/title_activity_media_browser" android:name="com.pressy.app.MediaBrowserActivity" android:screenOrientation="portrait" android:theme="@style/PressyActivityTheme"/>
+        <activity android:exported="false" android:name="com.pressy.app.QRScanActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.pressy.app.HelpActivity" android:screenOrientation="portrait" android:theme="@style/PressyActivityTheme"/>
+        <activity android:exported="false" android:name="com.pressy.app.ActivateLicenseActivity" android:screenOrientation="portrait" android:theme="@style/PressyDialogActivityTheme"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.pressy.app.SettingsDashboardActivity" android:process="com.pressy.app.service" android:screenOrientation="portrait" android:showOnLockScreen="true" android:taskAffinity="PRESSY.SETTINGS_DASHBOARD" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.pressy.app.DummyLaunchActivity" android:process="com.pressy.app.service" android:showOnLockScreen="true" android:taskAffinity="DUMMY.RUN_APP" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTop" android:name="com.pressy.app.RegisterActivity"/>
+        <service android:enabled="true" android:exported="false" android:name="com.pressy.app.PressyAppService" android:process="com.pressy.app.service"/>
+        <service android:enabled="true" android:exported="false" android:name="com.pressy.app.PressyAppCameraForegroundService" android:process="com.pressy.app.service" android:stopWithTask="false"/>
+        <service android:enabled="true" android:exported="false" android:name="com.pressy.app.PressyAppAudioRecordForegroundService" android:process="com.pressy.app.service" android:stopWithTask="false"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.pressy.app.SMSPartSentReceiver" android:process="com.pressy.app.service">
+            <intent-filter>
+                <action android:name="com.pressy.SMS_PART_SENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.app.BootReceiver" android:process="com.pressy.app.service">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.app.ReferralReceiver" android:process="com.pressy.app.service">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.app.PressyAppUpdateReceiver" android:process="com.pressy.app.service">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.app.PressyAppListener" android:process="com.pressy.app.service">
+            <intent-filter>
+                <action android:name="com.pressy.ACTION_PATTERN_COMPLETED"/>
+                <action android:name="com.pressy.ACTION_UNKNOWN_PATTERN_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.pressy.app.GCMIntentService"/>
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.pressy.app"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.pressy.app"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.pressy.sdk.LongPressActivity" android:process="com.pressy.service" android:showOnLockScreen="true" android:taskAffinity="DUMMY.LONGPRESS" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.speech.action.WEB_SEARCH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.speech.action.VOICE_SEARCH_HANDS_FREE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.sec.action.SVOICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleInstance" android:name="com.pressy.sdk.IsThatAPressyActivity" android:process="com.pressy.service" android:showOnLockScreen="true" android:taskAffinity="DUMMY.IS_THAT_A_PRESSY" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:excludeFromRecents="true" android:exported="true" android:label="@string/set_pressy_default_dialog_title" android:name="com.pressy.sdk.PressySetDefaultLongPressActivity" android:process="com.pressy.service"/>
+        <service android:exported="true" android:name="com.pressy.sdk.PressyService" android:process="com.pressy.service" android:stopWithTask="false"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.sdk.MediaButtonReceiver" android:process="com.pressy.service">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.sdk.SetVibrationFeedbackReceiver" android:process="com.pressy.service">
+            <intent-filter>
+                <action android:name="com.pressy.SET_VIBRATION_FEEDBACK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.sdk.SetPressesSpeedReceiver" android:process="com.pressy.service">
+            <intent-filter>
+                <action android:name="com.pressy.SET_PRESSES_SPEED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.sdk.SetLongPressEnabledReceiver" android:process="com.pressy.service">
+            <intent-filter>
+                <action android:name="com.pressy.SET_LONG_PRESS_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:enabled="true" android:exported="true" android:name="com.pressy.sdk.SetPressyEnabledReceiver" android:process="com.pressy.service">
+            <intent-filter>
+                <action android:name="com.pressy.SET_PRESSY_ENABLED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+</manifest>

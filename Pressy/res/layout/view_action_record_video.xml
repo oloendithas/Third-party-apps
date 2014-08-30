@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:orientation="vertical" android:id="@id/radioGroupVideoAction" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_radio_group_checkbox_left">
+        <RadioButton android:id="@id/radioOpenCameraApp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/open_camera_app" style="@style/PressyRadioButton" />
+        <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/padding_large" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large" />
+        <RadioButton android:id="@id/radioCaptureVideo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/capture_video" style="@style/PressyRadioButton" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layoutCaptureVideoDetails" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_radio_group_checkbox_left_indent_level2">
+            <RadioGroup android:id="@id/radioGroupSelectedCamera" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@id/radioBackCamera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/back_camera" style="@style/PressyRadioButton" />
+                <RadioButton android:id="@id/radioFrontCamera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/front_camera" style="@style/PressyRadioButton" />
+            </RadioGroup>
+            <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/padding_large" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large" />
+            <include layout="@layout/view_action_record" />
+        </LinearLayout>
+    </RadioGroup>
+</ScrollView>

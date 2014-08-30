@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="practice_pattern_desc">
+        <item>Short press</item>
+        <item>Two short presses</item>
+        <item>Three short presses</item>
+    </string-array>
+    <string-array name="tutorial_phases_description">
+        <item>Tap here to add a new action</item>
+        <item>For example, taggling your flashlight</item>
+        <item>Give your Action a name</item>
+        <item>Open the trigger list</item>
+        <item>"Let's go for one short press"</item>
+        <item>"Tap here and you're done!"</item>
+        <item>Now swipe the Action right to open edit options</item>
+        <item>"Here you can pause or delete the action.
+Swipe left to close."</item>
+    </string-array>
+</resources>

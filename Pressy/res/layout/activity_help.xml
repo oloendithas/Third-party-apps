@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/btnHelpSendRequest" android:layout_alignParentTop="true">
+        <WebView android:id="@id/webViewHelp" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/pgbLoadHelpWebpage" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Large" />
+    </FrameLayout>
+    <Button android:id="@id/btnHelpSendRequest" android:background="@drawable/button_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_normal" android:layout_marginTop="@dimen/padding_normal" android:layout_marginRight="@dimen/padding_normal" android:text="@string/report_a_bug" android:layout_above="@id/btnHelpSendFeedback" />
+    <Button android:id="@id/btnHelpSendFeedback" android:background="@drawable/button_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_normal" android:text="@string/button_text_send_feedback" android:layout_alignParentBottom="true" />
+</RelativeLayout>

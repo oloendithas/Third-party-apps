@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/padding_normal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner android:id="@id/spinEmailSelection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_normal" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_normal">
+        <EditText android:id="@id/txtLicenseCode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_normal" android:hint="@string/activation_code_hint" android:singleLine="true" android:layout_toLeftOf="@id/btnScanLicenseQR" android:imeOptions="actionDone" />
+        <Button android:id="@id/btnScanLicenseQR" android:background="@drawable/button_background" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scan_qr_button_text" android:layout_alignTop="@id/txtLicenseCode" android:layout_alignBottom="@id/txtLicenseCode" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/btnActivateLicense" android:background="@drawable/button_background" android:padding="@dimen/padding_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/button_text_activate_license" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/pgbActivatingLicense" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="@android:style/Widget.ProgressBar.Small" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/padding_normal">
+        <TextView android:textColor="#ff0000ff" android:layout_gravity="right" android:id="@id/txtHelpHyperlink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/help" />
+    </LinearLayout>
+</LinearLayout>

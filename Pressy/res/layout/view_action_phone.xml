@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pressy.app.ui.PhoneNumberPickerView android:id="@id/txtPhoneNumber" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_normal" android:hint="@string/phone_number_picker_hint" android:singleLine="true" />
+</LinearLayout>

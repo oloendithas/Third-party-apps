@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/triggers_list_background" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listPatterns" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <View android:id="@id/viewMorePatternsSeparator" android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/triggers_dropdown_border_width" android:layout_marginRight="@dimen/triggers_dropdown_border_width" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/txtMorePatterns" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more_patterns" />
+</LinearLayout>

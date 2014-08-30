@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.pressy.app.tutorial.TutorialPhaseView android:id="@id/viewTutorialPhase" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <Button android:textAppearance="?android:textAppearanceLarge" android:id="@id/btnEndTutorial" android:background="@drawable/button_background_end_tutorial" android:padding="@dimen/padding_large" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="100.0dip" android:text="@string/tutorial_end_button_text" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

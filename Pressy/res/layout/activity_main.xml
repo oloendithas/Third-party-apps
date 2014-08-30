@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pressy="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/listRules" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TableLayout android:id="@id/tblSelectActionType" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TableRow android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="phone" pressy:actionText="@string/action_type_phone" pressy:actionIcon="@drawable/selector_action_phone" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="message" pressy:actionText="@string/action_type_message" pressy:actionIcon="@drawable/selector_action_message" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="camera" pressy:actionText="@string/action_type_camera" pressy:actionIcon="@drawable/selector_action_camera" />
+            </TableRow>
+            <TableRow android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="light" pressy:actionText="@string/action_type_light" pressy:actionIcon="@drawable/selector_action_light" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="record" pressy:actionText="@string/action_type_record" pressy:actionIcon="@drawable/selector_action_record" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="video" pressy:actionText="@string/action_type_video" pressy:actionIcon="@drawable/selector_action_video" />
+            </TableRow>
+            <TableRow android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="run_app" pressy:actionText="@string/action_type_run_app" pressy:actionIcon="@drawable/selector_action_run_app" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="media" pressy:actionText="@string/action_type_media" pressy:actionIcon="@drawable/selector_action_media" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="settings" pressy:actionText="@string/action_type_settings" pressy:actionIcon="@drawable/selector_action_settings" />
+            </TableRow>
+            <TableRow android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="location" pressy:actionText="@string/action_type_location" pressy:actionIcon="@drawable/selector_action_location" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="script" pressy:actionText="@string/action_type_script" pressy:actionIcon="@drawable/selector_action_script" />
+                <com.pressy.app.ui.SelectActionButtonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_margin="@dimen/padding_small" android:layout_weight="1.0" pressy:actionType="developer" pressy:actionText="@string/action_type_developer" pressy:actionIcon="@drawable/selector_action_developer" />
+            </TableRow>
+        </TableLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/layoutAddEditAction" android:background="@android:color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:id="@id/txtActionName" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_normal" android:hint="@string/enter_action_name" android:drawablePadding="@dimen/padding_small" android:layout_toLeftOf="@id/viewTriggerSelectionAddEditAction" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <com.pressy.app.ui.TriggerDisplayView android:id="@id/viewTriggerSelectionAddEditAction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_normal" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_alignParentRight="true" pressy:allowSelection="true" pressy:displaySize="normal" />
+            </RelativeLayout>
+            <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/padding_small" android:layout_marginBottom="@dimen/padding_large" />
+            <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large">
+                <LinearLayout android:orientation="vertical" android:id="@id/layoutActionParametersContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:id="@id/layoutActionParametersPlaceholder" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/padding_small" android:layout_marginBottom="@dimen/padding_small" />
+                    <CheckBox android:id="@id/chkLaunchWhenScreenOff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_radio_group_checkbox_left" android:checked="true" android:text="@string/launch_when_screen_off" style="@style/PressyCheckBox" />
+                    <View android:background="@color/separator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/padding_small" android:layout_marginBottom="@dimen/padding_small" />
+                    <TextView android:layout_gravity="center_horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/padding_small" android:text="@string/show_toast_for_launched_action" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/radioShowToastLaunchRule" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RadioButton android:id="@id/radioShowToastLaunchRuleDefault" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_toast_launch_rule_default" android:layout_weight="1.0" style="@style/PressyRadioButton" />
+                        <RadioButton android:id="@id/radioShowToastLaunchRuleYes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_toast_launch_rule_yes" android:layout_weight="1.0" style="@style/PressyRadioButton" />
+                        <RadioButton android:id="@id/radioShowToastLaunchRuleNo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/show_toast_launch_rule_no" android:layout_weight="1.0" style="@style/PressyRadioButton" />
+                    </RadioGroup>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/layoutPressyDisabled" android:background="#4c000000" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:background="@drawable/dialog_is_that_a_pressy_background" android:padding="@dimen/padding_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_extra_large">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pressy_is_disabled" />
+            <Button android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="center_horizontal" android:id="@id/btnEnablePressy" android:background="@drawable/button_background" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_normal" android:text="@string/enable_pressy" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

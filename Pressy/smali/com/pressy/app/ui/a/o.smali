@@ -1,0 +1,57 @@
+.class Lcom/pressy/app/ui/a/o;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/RadioGroup$OnCheckedChangeListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/pressy/app/ui/a/n;
+
+
+# direct methods
+.method constructor <init>(Lcom/pressy/app/ui/a/n;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/pressy/app/ui/a/o;->a:Lcom/pressy/app/ui/a/n;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onCheckedChanged(Landroid/widget/RadioGroup;I)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/pressy/app/ui/a/o;->a:Lcom/pressy/app/ui/a/n;
+
+    const v1, 0x7f0a00c5
+
+    invoke-virtual {v0, v1}, Lcom/pressy/app/ui/a/n;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0a00c4
+
+    if-ne v1, p2, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :goto_0
+    iget-object v0, p0, Lcom/pressy/app/ui/a/o;->a:Lcom/pressy/app/ui/a/n;
+
+    invoke-virtual {v0}, Lcom/pressy/app/ui/a/n;->a()V
+
+    return-void
+
+    :cond_0
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+.end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pressy="http://schemas.android.com/apk/res-auto">
+    <com.pressy.app.ui.TriggerDisplayView android:layout_gravity="center_horizontal" android:id="@id/viewPracticePattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_normal" pressy:drawBorder="true" pressy:displaySize="large" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/pressy_element_fill_color" android:gravity="center_horizontal" android:id="@id/txtPracticePatternDesc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/padding_normal" android:text="PATTERN DESCRIPTION" />
+</LinearLayout>

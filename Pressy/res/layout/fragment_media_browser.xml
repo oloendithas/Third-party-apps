@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:id="@id/gridMediaItems" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/padding_small" android:verticalSpacing="@dimen/padding_small" android:stretchMode="columnWidth" android:numColumns="3" />
+    <TextView android:gravity="center" android:id="@id/txtNoMediaItems" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

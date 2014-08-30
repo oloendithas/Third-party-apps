@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/toast_layout_root" android:background="@drawable/toast_background" android:padding="@dimen/padding_normal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pressy="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/imageAction" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/padding_small" android:layout_marginTop="@dimen/padding_normal" android:layout_marginBottom="@dimen/padding_normal" android:src="@drawable/ic_action_run_app_small" android:scaleType="centerInside" android:layout_centerVertical="true" />
+    <TextView android:textColor="@color/toast_text_color" android:id="@id/toastText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_normal" android:layout_marginRight="@dimen/padding_normal" android:text="TOAST TEXT" android:layout_toLeftOf="@id/viewToastPattern" android:layout_toRightOf="@id/imageAction" android:layout_centerVertical="true" />
+    <com.pressy.app.ui.TriggerDisplayView android:id="@id/viewToastPattern" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" pressy:allowSelection="false" pressy:invertColor="false" pressy:drawBorder="false" pressy:displaySize="small" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:orientation="vertical" android:id="@id/radioGroupRecordOption" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/radioRecordToggle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/record_option_toggle" style="@style/PressyRadioButton" />
+    <View android:background="@color/separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/padding_large" android:layout_marginTop="@dimen/padding_large" android:layout_marginRight="@dimen/padding_large" android:layout_marginBottom="@dimen/padding_large" />
+    <RadioButton android:id="@id/radioRecordFixedDuration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/record_option_fixed_duration" style="@style/PressyRadioButton" />
+    <SeekBar android:layout_gravity="center_horizontal" android:id="@id/seekBarRecordDuration" android:visibility="gone" android:layout_width="270.0dip" android:layout_height="wrap_content" />
+</RadioGroup>

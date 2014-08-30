@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:id="@id/radioGroupLightOptions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_radio_group_checkbox_left"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/radioToggleLight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/action_light_toggle" style="@style/PressyRadioButton" />
+    <RadioButton android:id="@id/radioLightOn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_light_on" style="@style/PressyRadioButton" />
+    <RadioButton android:id="@id/radioLightOff" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_light_off" style="@style/PressyRadioButton" />
+    <RadioButton android:id="@id/radioLightBlink" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_light_blink" style="@style/PressyRadioButton" />
+    <SeekBar android:id="@id/seekBarBlinkDuration" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="10" android:progress="5" />
+</RadioGroup>

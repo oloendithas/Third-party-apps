@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/btnToggleBluetooth" android:background="@drawable/dashboard_top_left_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:src="@drawable/ic_action_settings_bluetooth_active" />
+        <ImageButton android:id="@id/btnToggleWifi" android:background="@drawable/dashboard_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:layout_marginLeft="@dimen/dashboard_button_margin" android:layout_marginRight="@dimen/dashboard_button_margin" android:src="@drawable/ic_action_settings_wifi_active" />
+        <ImageButton android:id="@id/btnToggleLight" android:background="@drawable/dashboard_top_right_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:src="@drawable/ic_action_settings_light_active" />
+    </TableRow>
+    <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dashboard_button_margin" android:layout_marginBottom="@dimen/dashboard_button_margin">
+        <ImageButton android:id="@id/btnToggleSound" android:background="@drawable/dashboard_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:src="@drawable/ic_action_settings_sound_active" />
+        <ImageButton android:id="@id/btnStartPressy" android:background="@drawable/dashboard_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:layout_marginLeft="@dimen/dashboard_button_margin" android:layout_marginRight="@dimen/dashboard_button_margin" android:src="@drawable/ic_action_settings_pressyicon_active" />
+        <ImageButton android:id="@id/btnToggleScreenRotation" android:background="@drawable/dashboard_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:src="@drawable/ic_action_settings_screen_rotation_active" />
+    </TableRow>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dashboard_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dashboard_button_margin" android:layout_span="3">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="left|center" android:id="@id/imgBrightnessDown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_settings_brightness_d_n" />
+            <CheckBox android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/chkAutoBrightness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_checkbox_brightness" android:text="@string/auto_brightness" />
+            <ImageView android:layout_gravity="right|center" android:id="@id/imgBrightnessUp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_settings_brightness_u_p" />
+        </FrameLayout>
+        <SeekBar android:id="@id/seekbarBrightness" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_extra_large" android:layout_marginRight="@dimen/padding_extra_large" android:layout_marginBottom="@dimen/padding_normal" android:max="255" android:progress="128" android:progressDrawable="@drawable/seek_bar" android:thumb="@drawable/seek_bar_thumb" android:thumbOffset="0.0dip" />
+    </LinearLayout>
+    <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/btnMediaRewind" android:background="@drawable/dashboard_bottom_left_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:src="@drawable/ic_action_settings_previous_active" />
+        <ImageButton android:id="@id/btnMediaPlayPause" android:background="@drawable/dashboard_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:layout_marginLeft="@dimen/dashboard_button_margin" android:layout_marginRight="@dimen/dashboard_button_margin" android:src="@drawable/ic_action_settings_play_active" />
+        <ImageButton android:id="@id/btnMediaForward" android:background="@drawable/dashboard_bottom_right_button" android:layout_width="@dimen/dashboard_button_width" android:layout_height="@dimen/dashboard_button_height" android:src="@drawable/ic_action_settings_next_active" />
+    </TableRow>
+</TableLayout>

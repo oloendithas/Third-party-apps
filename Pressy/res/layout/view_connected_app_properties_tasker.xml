@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:orientation="vertical" android:id="@id/radioGroupTaskerOptions" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/radioTaskerLaunchApp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/tasker_launch_tasker_app" style="@style/PressyRadioButton" />
+    <RadioButton android:id="@id/radioTaskerLaunchTask" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tasker_launch_task" style="@style/PressyRadioButton" />
+    <RadioGroup android:orientation="vertical" android:id="@id/radioGroupTaskerTasks" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/padding_radio_group_checkbox_left_indent_level2" />
+</RadioGroup>
